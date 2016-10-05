@@ -7,9 +7,7 @@ export default class App extends Base {
         
         return (
             <div className='BuildingLobby'>
-               <p>
-               	She got a lot of Prada, that Dolce & Gabbana test
-               </p>
+             	Welcome to the Setlife 
             </div>
         )
     }
