@@ -1,0 +1,1 @@
+export const SET_LIFE = 'SET_LIFE';
