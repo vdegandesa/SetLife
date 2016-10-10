@@ -11,8 +11,8 @@ Clone repo
 
 cd **setgov**
 
-Install Dependencies `npm install` *make sure to have webpack, webpack-dev-server and 
-forever installed globally*
+Install Dependencies `npm install` *make sure to have **webpack**, **webpack-dev-server** and 
+**forever** installed globally*
 
 #Usage
 
@@ -25,4 +25,24 @@ forever installed globally*
 `Entry point Setlife/src/components/App`
 
 Run command `npm run dev` to start webpack-dev-server , for custom configuration go to webpack.config.js
+
+##Production
+
+`npm run deploy`
+
+bundle will reside in `Setlife/public` 
+
+*All static files such as images and fonts are in public folder*
+
+##Testing Production bundle 
+
+`npm run start`
+
+`open http://localhost:3000`
+
+will start server, runs on bundle files in public
+
+`npm run stop` to halt server 
+
+
 
