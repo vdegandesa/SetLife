@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --inline ",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "forever stopall; forever start server.js;",
     "stop": "forever stopall;",
-    "deploy": "webpack -p --config webpack.config.production.js"
+    "deploy": "./node_modules/webpack/bin/webpack.js -p --config webpack.config.production.js"
   },
   "babel": {
     "presets": [
