@@ -44,11 +44,11 @@ Development files are served from webpack-dev-server with webpack.config.js and 
 
 to start webpack-dev-server run:
 
-	`npm run dev`
+	npm run dev
 
 this command will bundle up files for webpack-dev-sever and host them on: 
 
-	`http://localhost:8080/webpack-dev-server/`
+	http://localhost:8080/webpack-dev-server/
 
 **_anything outside of src folder will not be hot-reloaded on change_**
 
@@ -56,27 +56,27 @@ this command will bundle up files for webpack-dev-sever and host them on:
 
 In development bundle are created behind the scene and are not production ready, production ready bundle are served from webpack in webpack.config.production.js. To create production ready bundle run: 
 
-	`npm run deploy`
+	npm run deploy
 
 this command will bundle up files and export them to public folder:
 
-	`Setlife/public`
+	Setlife/public
 
 ##Test Production Bundle
 
 Testing production bundle can be done by running expres server from server.js in the root directory. To start server run:
 
-	`npm run Start`
+	npm run Start
 
 This script will server your app from the produciton bundle in the public folder. To access the app visit 
 
-	`http://localhost:3000`
+	http://localhost:3000
 
 **_Make sure to terminate the server when finished testing production bundle_**
 
 to terminate the express server run:
 
-	`npm run stop`
+	npm run stop
 
 
 
