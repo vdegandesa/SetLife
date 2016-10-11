@@ -1,10 +1,10 @@
 import React from 'react';
 import Base from './Base';
 
-export default class Landing extends Base{
+export default class LandingPage extends Base{
 	render(){
 		return ( 
-			<div>Landing </div>
+			<div>LandingPage </div>
 		);
 	}
 	

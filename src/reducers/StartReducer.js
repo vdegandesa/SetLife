@@ -1,8 +1,7 @@
 import * as types from '../constants/actionTypes';
 
-
 const initialState = {
-    setLife : true 
+    setLife: true 
 };
 
 export default function reducer(state = initialState, action) {

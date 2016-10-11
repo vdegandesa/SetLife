@@ -29,10 +29,6 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 const appMount = document.getElementById('app-mount-point');
 
-
-
-
-
 render(
 	<Provider store={store}>
 		<Router history={history}>

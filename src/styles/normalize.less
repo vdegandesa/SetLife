@@ -1,7 +1,7 @@
 // normalize
 html {
     .colors(@white, @navy);
-    font-size: 8px;
+    font-size: @defaultFontSize;
     font-family: Avenir Roman;
 }
 
@@ -84,6 +84,6 @@ input::-moz-focus-inner {
 input, input:focus, textarea {
     border: none;
     background: none;
-    font-size: 14px;
+    font-size: @defaultFontSize * 1.1;
     outline: 0;
 }

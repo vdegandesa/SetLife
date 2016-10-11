@@ -24,9 +24,6 @@ export default {
         )
     },
     post(route, data) {
-        console.log(API_ROOT + route);
-        console.log(data);
-
         return (
             fetch(API_ROOT + route, {
                 method: 'POST',
@@ -42,15 +39,12 @@ export default {
             })
             .then(res => res.json())
             .then(res => {
-                console.log(res);
                 return res;
             })
             .catch(err => console.error(err))
         )
     },
     graph(graphData) {
-        console.log(graphData);
-
         return (
             fetch(API_ROOT + 'graph', {
                 method: 'POST',
@@ -66,7 +60,6 @@ export default {
             })
             .then(res => res.json())
             .then(payload => {
-                console.log(payload.data);
                 if (payload && payload.errors) {
                     throw payload.errors; 
                 }
@@ -80,8 +73,6 @@ export default {
         )
     },
     getExt(route, headers, query) {
-        console.log(route);
-
         return (
             fetch(route, {
                 method: 'GET',
@@ -90,29 +81,22 @@ export default {
             })
             .then(res => res.json())
             .then(res => {
-                console.log(res);
                 return res;
             })
             .catch(err => console.error(err))
         )
     },
     postExt(route, headers, data) {
-        console.log(route);
-        console.log(headers);
-        console.log(data);
-
         return (
             fetch(route, {
                 method: 'POST',
                 headers: {
-                    'X-TB-PARTNER-AUTH': '45562752:17aafc6898ff78b0285c9bcd2546406b6b7d87c9',
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: data
             })
             .then(res => {
-                console.log(res);
                 return res;
             })
             .catch(err => console.error(err))
