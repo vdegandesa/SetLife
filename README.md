@@ -1,6 +1,6 @@
 # SetLife
 
-Boiler plate for a React web app
+SetOceans's React app boiler plate repo
 
 Libaries used: Express, React, Redux, React Router, Webpack
 
