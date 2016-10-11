@@ -13,7 +13,6 @@ Clone latest repo by running:
 	https://github.com/brgarciarivas/SetLife.git
 
 	cd setlife
-
 ```	
 
 ###Install all dependencies, run : `npm install` 
@@ -41,39 +40,41 @@ Get familiar witht the **setlife** folder structure
 
 ##Development
 
-	Development files are served from webpack-dev-server from webpack.config.js and are hot-reloaded automatically, to start webpack-dev-server run:
+Development files are served from webpack-dev-server with webpack.config.js and are hot-reloaded automatically.
+
+to start webpack-dev-server run:
 
 	`npm run dev`
 
-	this command will bundle up files for webpack-dev-sever and host them on: 
+this command will bundle up files for webpack-dev-sever and host them on: 
 
 	`http://localhost:8080/webpack-dev-server/`
 
-	**__ anything outside of src folder will not be hot-reloaded on change __**
+**_anything outside of src folder will not be hot-reloaded on change_**
 
 ##Production	
 
-	In development bundle are created behind the scene and are not production ready, production ready bundle are served from webpack in webpack.config.production.js. To create production ready bundle run: 
+In development bundle are created behind the scene and are not production ready, production ready bundle are served from webpack in webpack.config.production.js. To create production ready bundle run: 
 
 	`npm run deploy`
 
-	this command will bundle up files and export them to public folder:
+this command will bundle up files and export them to public folder:
 
 	`Setlife/public`
 
 ##Test Production Bundle
 
-	Testing production bundle can be done by running expres server from server.js in the root directory. To start server run:
+Testing production bundle can be done by running expres server from server.js in the root directory. To start server run:
 
 	`npm run Start`
 
-	This script will server your app from the produciton bundle in the public folder. To access the app visit 
+This script will server your app from the produciton bundle in the public folder. To access the app visit 
 
 	`http://localhost:3000`
 
-	**__ Make sure to terminate the server when finished testing production bundle __**
+**_Make sure to terminate the server when finished testing production bundle_**
 
-	to terminate the express server run:
+to terminate the express server run:
 
 	`npm run stop`
 
