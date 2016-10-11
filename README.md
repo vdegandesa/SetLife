@@ -5,17 +5,27 @@ Boiler plate for React web app
 Libaries used: Express, React, Redux, React Router, Webpack
 
 
-## Setup
+## Getting Started
 
-Clone repo
+Clone repo https://github.com/brgarciarivas/SetLife.git
 
-cd **setgov**
+cd **setlife**
 
-Install Dependencies `npm install` 
+Install all dependencies `npm install` 
+
+##Directory Layout
+
+Get familiar witht the **setlife** folder structure
+
+```
+|-- /public/ #Folder holds all compiled and static files such as fonts and images
+```
 
 #Usage
 
 ##Development
+
+Run command `npm run dev` to start webpack-dev-server , for custom configuration go to webpack.config.js
 
 `npm run dev`
 
@@ -23,7 +33,7 @@ open http://localhost:8080/webpack-dev-server/
 
 Entry point Setlife/src/components/App
 
-Run command `npm run dev` to start webpack-dev-server , for custom configuration go to webpack.config.js
+
 
 ##Production
 

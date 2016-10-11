@@ -1,5 +1,4 @@
 import React from 'react';
-import Router from 'react-router/lib/Router';
 import Route from 'react-router/lib/Route';
 import IndexRoute from 'react-router/lib/IndexRoute';
 
@@ -8,7 +7,7 @@ import Landing from './components/Landing';
 
 export default (
 	
-	  <Route path="/" component={App}>
+	  <Route path="/index.html" component={App}>
 	    <IndexRoute component={Landing}/>
 	  </Route>
 	
