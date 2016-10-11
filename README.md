@@ -6,9 +6,9 @@ Libaries used: Express, React, Redux, React Router, Webpack
 
 ## Setup
 
-1. Clone the repo `git clone https://github.com/otech47/alwaystrue-web`
+1. Clone the repo `git clone https://github.com/brgarciarivas/setlife`
 
-2. Move into the directory `cd alwaystrue-web`
+2. Move into the directory `cd setlife`
 
 3. Install dependencies `npm install` 
 
