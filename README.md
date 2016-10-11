@@ -1,46 +1,39 @@
 # SetLife
 
-Boiler plate for React web app
+Boiler plate for a React web app
 
 Libaries used: Express, React, Redux, React Router, Webpack
 
+## Setup
 
-## Getting Started
+1. Clone the repo `git clone https://github.com/otech47/alwaystrue-web`
 
-Clone latest repo by running:
+2. Move into the directory `cd alwaystrue-web`
 
-```
-	https://github.com/brgarciarivas/SetLife.git
-
-	cd setlife
-```	
-
-###Install all dependencies, run : `npm install` 
-
-This will install all dependencies and developer tools
+3. Install dependencies `npm install` 
 
 ##Directory Layout
 
 Get familiar witht the **setlife** folder structure
 
 ```
-|-- /public/                                    # Folder holds all compiled and static files such as fonts and images
-	|-- /fonts/									# Set of Avenir Font used copmany wide
+|-- /public/                                    # Holds all compiled and static files such as fonts and images
+	|-- /fonts/									# Avenir Font included
 	|-- /images/								# Store all photos here
-|-- /src/										# Source code for application
-	|-- /actions/								# All actions for redux 
+|-- /src/										# Application source code
+	|-- /actions/								# Redux Actions 
 	|-- /components/							# React components
 	|-- /constants/								# Any constant variable used throughout the app
-	|-- /reducers/								# Reducers for redux
-	|-- /scripts/								# Any funcinality not neciciarlly needed inside any component
-	|-- /styles/								# All .less stylesheet
+	|-- /reducers/								# Redux Reducers
+	|-- /scripts/								# Functions for API calls, data formatters, validators, etc
+	|-- /styles/								# All .less stylesheets
 ```
 
 #Usage
 
 ##Development
 
-Development files are served from webpack-dev-server with webpack.config.js and are hot-reloaded automatically.
+Development files are served from webpack-dev-server, configured with webpack.config.js, and hot-reloaded automatically.
 
 to start webpack-dev-server run:
 
@@ -50,11 +43,11 @@ this command will bundle up files for webpack-dev-sever and host them on:
 
 	http://localhost:8080/webpack-dev-server/
 
-**_anything outside of src folder will not be hot-reloaded on change_**
+**_anything outside of the ~/src folder will not be hot-reloaded when changed_**
 
 ##Production	
 
-In development bundle are created behind the scene and are not production ready, production ready bundle are served from webpack in webpack.config.production.js. To create production ready bundle run: 
+In development, the bundle is created behind the scenes and is not production ready. The production-ready bundle is served from webpack using the configuration file ~/webpack.config.production.js. To create a production-ready bundle run: 
 
 	npm run deploy
 
@@ -62,17 +55,21 @@ this command will bundle up files and export them to public folder:
 
 	Setlife/public
 
-##Test Production Bundle
+##Testing your production bundle 
 
-Testing production bundle can be done by running expres server from server.js in the root directory. To start server run:
+Testing the production bundle can be done by running an express server from server.js in the root directory. To start the server run:
 
-	npm run Start
+	npm run start
+	
+or
 
-This script will server your app from the produciton bundle in the public folder. To access the app visit 
+	node server
+	
+This script will serve your app from the production bundle in the public folder. To access the app visit 
 
 	http://localhost:3000
 
-**_Make sure to terminate the server when finished testing production bundle_**
+**_Make sure to terminate the server when finished testing_**
 
 to terminate the express server run:
 
