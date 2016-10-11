@@ -7,51 +7,79 @@ Libaries used: Express, React, Redux, React Router, Webpack
 
 ## Getting Started
 
-Clone repo https://github.com/brgarciarivas/SetLife.git
+Clone latest repo by running:
 
-cd **setlife**
+```
+	https://github.com/brgarciarivas/SetLife.git
 
-Install all dependencies `npm install` 
+	cd setlife
+
+```	
+
+###Install all dependencies, run : `npm install` 
+
+This will install all dependencies and developer tools
 
 ##Directory Layout
 
 Get familiar witht the **setlife** folder structure
 
 ```
-|-- /public/ #Folder holds all compiled and static files such as fonts and images
+|-- /public/                                    # Folder holds all compiled and static files such as fonts and images
+	|-- /fonts/									# Set of Avenir Font used copmany wide
+	|-- /images/								# Store all photos here
+|-- /src/										# Source code for application
+	|-- /actions/								# All actions for redux 
+	|-- /components/							# React components
+	|-- /constants/								# Any constant variable used throughout the app
+	|-- /reducers/								# Reducers for redux
+	|-- /scripts/								# Any funcinality not neciciarlly needed inside any component
+	|-- /styles/								# All .less stylesheet
 ```
 
 #Usage
 
 ##Development
 
-Run command `npm run dev` to start webpack-dev-server , for custom configuration go to webpack.config.js
+	Development files are served from webpack-dev-server from webpack.config.js and are hot-reloaded automatically, to start webpack-dev-server run:
 
-`npm run dev`
+	`npm run dev`
 
-open http://localhost:8080/webpack-dev-server/
+	this command will bundle up files for webpack-dev-sever and host them on: 
 
-Entry point Setlife/src/components/App
+	`http://localhost:8080/webpack-dev-server/`
+
+	**__ anything outside of src folder will not be hot-reloaded on change __**
+
+##Production	
+
+	In development bundle are created behind the scene and are not production ready, production ready bundle are served from webpack in webpack.config.production.js. To create production ready bundle run: 
+
+	`npm run deploy`
+
+	this command will bundle up files and export them to public folder:
+
+	`Setlife/public`
+
+##Test Production Bundle
+
+	Testing production bundle can be done by running expres server from server.js in the root directory. To start server run:
+
+	`npm run Start`
+
+	This script will server your app from the produciton bundle in the public folder. To access the app visit 
+
+	`http://localhost:3000`
+
+	**__ Make sure to terminate the server when finished testing production bundle __**
+
+	to terminate the express server run:
+
+	`npm run stop`
 
 
 
-##Production
 
-`npm run deploy`
-
-bundle will reside in `Setlife/public` 
-
-*All static files such as images and fonts are in public folder*
-
-##Testing Production bundle 
-
-`npm run start`
-
-`open http://localhost:3000`
-
-will start server, runs on bundle files in public
-
-`npm run stop` to halt server 
 
 
 
