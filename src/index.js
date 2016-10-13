@@ -9,12 +9,14 @@ import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import routes from './routes';
 
-//Redux Store setup
+// Stylesheets
+import './styles/index.less';
+
+// Redux Store setup
 const logger = createLogger({
     level: 'info',
     collapsed: true
 });
-
 
 // Create an enhanced history that syncs navigation events with the store
 
