@@ -14,7 +14,7 @@ Libaries used: Express, React, Redux, React Router, Webpack
 
 ##Directory Layout
 
-Get familiar witht the **setlife** folder structure
+Get familiar with the **setlife** folder structure
 
 ```
 |-- /public/                                    # Holds all compiled and static files such as fonts and images
