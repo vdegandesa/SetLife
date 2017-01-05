@@ -12,16 +12,16 @@ var port = isProduction ? 80 : 3000;
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('*',function(req, res, next){
+app.get('*', function(req, res, next) {
 
     // Prevents an HTML response for API calls
     if (req.path.indexOf('/api/') != -1) {
         return next();
     }
 
-	fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text){
-		res.send(text);
-	});
+    fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text) {
+        res.send(text);
+    });
 });
 
 var cors = require('cors');
@@ -58,6 +58,6 @@ app.use('/api/v/:vid/graph', graphqlHTTP(function(req, res) {
 }));
 
 
-app.listen(port,function(){
-    console.log('SetLife-ReactWithApi: Server running on port ' + port)
+app.listen(port, function() {
+    console.log('SetLife-ReactWithApi: Server running on port ' + port);
 });

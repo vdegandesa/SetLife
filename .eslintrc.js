@@ -27,6 +27,7 @@ module.exports = {
         'no-path-concat': 'off',
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
+        'no-return-assign': 'off',
         'no-self-compare': 'off',
         'no-shadow': 'off',
         'no-undef': 'off',
