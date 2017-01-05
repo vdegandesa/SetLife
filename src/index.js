@@ -33,7 +33,7 @@ const appMount = document.getElementById('app-mount-point');
 
 render(
 	<Provider store={store}>
-		<Router history={history}>
+		               <Router history={history}>
 			{ routes }
 		</Router>
 	</Provider>
