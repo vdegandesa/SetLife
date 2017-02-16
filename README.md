@@ -17,16 +17,23 @@ Libaries used: Express, React, Redux, React Router, Webpack
 Get familiar with the **setlife** folder structure
 
 ```
-|-- /public/                                    # Holds all compiled and static files such as fonts and images
-	|-- /fonts/									# Avenir Font included
-	|-- /images/								# Store all photos here
-|-- /src/										# Application source code
-	|-- /actions/								# Redux Actions 
-	|-- /components/							# React components
-	|-- /constants/								# Any constant variable used throughout the app
-	|-- /reducers/								# Redux Reducers
-	|-- /scripts/								# Functions for API calls, data formatters, validators, etc
-	|-- /styles/								# All .less stylesheets
+|-- /api/                           # Application source code
+    |-- /config/                    # Configuration files (database options, keys, constants, etc) 
+    |-- /handlers/                  # Handle 3rd party APIs here with request.js
+    |-- /models/                    # Database model definitions
+    |-- /modules/                   # Holds files with modular functionality
+    |-- /types/                     # GraphQL type definitions
+    |-- schema.js                   # Root file serving as an index of API endpoints
+|-- /public/                        # Holds all compiled and static files such as fonts and images
+	|-- /fonts/						# Avenir Font included
+	|-- /images/					# Store all photos here
+|-- /src/							# Application source code
+	|-- /actions/					# Redux Actions 
+	|-- /components/			    # React components
+	|-- /constants/					# Any constant variable used throughout the app
+	|-- /reducers/					# Redux Reducers
+	|-- /scripts/					# Functions for API calls, data formatters, validators, etc
+	|-- /styles/					# All .less stylesheets
 ```
 
 #Usage
