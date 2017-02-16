@@ -27,7 +27,7 @@ export default class App extends Base {
             <div>
                 {this.props.children}
             </div>
-        )
+        );
     }
 }
 
