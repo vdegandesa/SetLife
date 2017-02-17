@@ -10,6 +10,9 @@
     "stop": "forever stopall;",
     "deploy": "./node_modules/webpack/bin/webpack.js -p --config webpack.config.production.js"
   },
+  "bin": {
+    "setlife": "./setlife.js"
+  },
   "babel": {
     "presets": [
       "react",
@@ -28,9 +31,13 @@
   },
   "homepage": "https://github.com/brgarciarivas/SetLife#readme",
   "dependencies": {
+    "commander": "^2.9.0",
+    "ejs": "^2.5.6",
     "express": "^4.14.0",
+    "fs-extra": "^2.0.0",
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
+    "path": "^0.12.7",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
