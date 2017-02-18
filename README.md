@@ -87,3 +87,4 @@ to terminate the express server run:
 - Run `npm install -g` to enable `setlife` CLI tools
 - `setlife create-component <name>` creates a standard component in /src/components
 - Add the option `--redux` or `-r` for Redux-enabled components with `mapStateToProps` and `mapDispatchToProps` functions connected to the component
+- Add the option `--style` or `-s` to generate the corresponding stylesheet and add it to the index
