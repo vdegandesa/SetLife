@@ -80,7 +80,7 @@ program
     .command('create-component <name>')
     .option('-s, --style', 'Create dedicated stylesheet')
     .option('-r, --redux', 'Connect Redux state mappings')
-    .description('Generate a new React Native component.')
+    .description('Generate a new React component.')
     .action(function(name, options) {
         generateComponent(name, options);
         
