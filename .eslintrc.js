@@ -54,6 +54,7 @@ module.exports = {
         'semi': ['error', 'always'],
         'space-before-function-paren': ['off'],
         'spaced-comment': ['off'],
+        'strict': ['off'],
         'vars-on-top': ['off'],
         'wrap-iife': ['off']
     }
