@@ -88,3 +88,6 @@ to terminate the express server run:
 - `setlife create-component <name>` creates a standard component in /src/components
 - Add the option `--redux` or `-r` for Redux-enabled components with `mapStateToProps` and `mapDispatchToProps` functions connected to the component
 - Add the option `--style` or `-s` to generate the corresponding stylesheet and add it to the index
+---
+- `setlife create-model <name>` creates a standard model in /api/models
+- Add the option `--type` or `-t` to create the associated Bookshelf-GraphQL Type
