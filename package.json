@@ -7,6 +7,9 @@
     "start": "forever stopall; forever start server.js;",
     "stop": "forever stopall;"
   },
+  "bin": {
+    "setlife": "./setlife.js"
+  },
   "babel": {
     "presets": [
       "react",
@@ -26,11 +29,14 @@
   "homepage": "https://github.com/brgarciarivas/SetLife#readme",
   "dependencies": {
     "bookshelf": "^0.10.2",
+    "commander": "^2.9.0",
     "cors": "^2.8.1",
+    "ejs": "^2.5.6",
     "exports-loader": "^0.6.3",
     "express": "^4.14.0",
     "express-graphql": "github:otech47/express-graphql",
     "forever": "^0.15.3",
+    "fs-extra": "^2.0.0",
     "graphql": "^0.4.9",
     "graphql-bookshelf": "github:otech47/graphql-bookshelf",
     "imports-loader": "^0.6.5",
@@ -38,6 +44,8 @@
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
     "mysql": "^2.11.1",
+    "path": "^0.12.7",
+    "pluralize": "^3.1.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",

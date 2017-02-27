@@ -1,5 +1,7 @@
 var models = module.exports = (function() {
     return {
-        SampleModel: require('./SampleModel')
+        Conversation: require('./Conversation'),
+        SampleModel: require('./SampleModel'),
+        Shopper: require('./Shopper')
     };
 })();
