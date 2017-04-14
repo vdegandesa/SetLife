@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, Route, browserHistory, hashHistory } from 'react-router';
 import { Provider, connect } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux';
 import reducers from './reducers/index';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -19,23 +19,25 @@ const logger = createLogger({
 });
 
 // Create an enhanced history that syncs navigation events with the store
+const isProduction = process.env.NODE_ENV === 'production';
 
-const middleware = [thunk, logger];
+const envHistory = isProduction ? browserHistory : hashHistory;
 
-const store  = compose(
+const middleware = [thunk, routerMiddleware(envHistory)];
+
+const store = compose(
     applyMiddleware(...middleware)
 )(createStore)(reducers);
 
-const history = syncHistoryWithStore(browserHistory, store);
-
+const history = syncHistoryWithStore(envHistory, store);
 
 const appMount = document.getElementById('app-mount-point');
 
 render(
-	<Provider store={store}>
-		<Router history={history}>
-			{ routes }
-		</Router>
-	</Provider>
-	, appMount
+    <Provider store={store}>
+        <Router history={history}>
+            { routes }
+        </Router>
+    </Provider>
+    , appMount
 );

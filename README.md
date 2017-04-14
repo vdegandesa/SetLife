@@ -17,16 +17,23 @@ Libaries used: Express, React, Redux, React Router, Webpack
 Get familiar with the **setlife** folder structure
 
 ```
-|-- /public/                                    # Holds all compiled and static files such as fonts and images
-	|-- /fonts/									# Avenir Font included
-	|-- /images/								# Store all photos here
-|-- /src/										# Application source code
-	|-- /actions/								# Redux Actions 
-	|-- /components/							# React components
-	|-- /constants/								# Any constant variable used throughout the app
-	|-- /reducers/								# Redux Reducers
-	|-- /scripts/								# Functions for API calls, data formatters, validators, etc
-	|-- /styles/								# All .less stylesheets
+|-- /api/                           # Application source code
+    |-- /config/                    # Configuration files (database options, keys, constants, etc) 
+    |-- /handlers/                  # Handle 3rd party APIs here with request.js
+    |-- /models/                    # Database model definitions
+    |-- /modules/                   # Holds files with modular functionality
+    |-- /types/                     # GraphQL type definitions
+    |-- schema.js                   # Root file serving as an index of API endpoints
+|-- /public/                        # Holds all compiled and static files such as fonts and images
+	|-- /fonts/						# Avenir Font included
+	|-- /images/					# Store all photos here
+|-- /src/							# Application source code
+	|-- /actions/					# Redux Actions 
+	|-- /components/			    # React components
+	|-- /constants/					# Any constant variable used throughout the app
+	|-- /reducers/					# Redux Reducers
+	|-- /scripts/					# Functions for API calls, data formatters, validators, etc
+	|-- /styles/					# All .less stylesheets
 ```
 
 #Usage
@@ -75,9 +82,12 @@ to terminate the express server run:
 
 	npm run stop
 
+##Using the CLI tools
 
-
-
-
-
-
+- Run `npm install -g` to enable `setlife` CLI tools
+- `setlife create-component <name>` creates a standard component in /src/components
+- Add the option `--redux` or `-r` for Redux-enabled components with `mapStateToProps` and `mapDispatchToProps` functions connected to the component
+- Add the option `--style` or `-s` to generate the corresponding stylesheet and add it to the index
+---
+- `setlife create-model <name>` creates a standard model in /api/models
+- Add the option `--type` or `-t` to create the associated Bookshelf-GraphQL Type

@@ -63,20 +63,18 @@
 .invisible  {
     opacity:0!important;
 }
-.round-border {
-    border: solid 1px @dark-gray;
-    border-radius: 10000px;
-    &.orange {
-        border: solid 1px @orange;
-    }
-}
 .size(@width, @height: @width) {
     width: @width;
     height: @height;
 }
-.tileBorder {
-    border: solid 1px @light-gray;
-    border-radius: 3px;
+.sizePadding(@yFactor: 1, @xFactor: 1) {
+    padding: @defaultSpacing * @yFactor @defaultSpacing * @xFactor;
+}
+.sizeMargin(@factor: 1) {
+    margin: @defaultSpacing * @factor;
+}
+.sizeMargin(@yFactor: 1, @xFactor: 1) {
+    margin: @defaultSpacing * @yFactor @defaultSpacing * @xFactor;
 }
 .transform(@value) {
     -webkit-transform: @value;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {API_ROOT} from '../constants';
+import { API_ROOT } from '../constants';
 
 export default {
     get(route, query) {
@@ -11,17 +11,17 @@ export default {
                     withCredentials: true
                 },
                 headers: {
-                    'Accept': 'application/json',
+                    Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 data: JSON.stringify(query)
             })
-            .then(res => {
+            .then((res) => {
                 console.log(res);
                 res.json();
             })
             .catch(err => console.error(err))
-        )
+        );
     },
     post(route, data) {
         return (
@@ -31,18 +31,18 @@ export default {
                     withCredentials: true
                 },
                 headers: {
-                    'Accept': 'application/json',
+                    Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data),
                 credentials: 'include'
             })
             .then(res => res.json())
-            .then(res => {
+            .then((res) => {
                 return res;
             })
             .catch(err => console.error(err))
-        )
+        );
     },
     graph(graphData) {
         return (
@@ -52,25 +52,24 @@ export default {
                     withCredentials: true
                 },
                 headers: {
-                    'Accept': 'application/json',
+                    Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(graphData),
                 credentials: 'include'
             })
             .then(res => res.json())
-            .then(payload => {
+            .then((payload) => {
                 if (payload && payload.errors) {
                     throw payload.errors; 
-                }
-                else if (payload && payload.data && payload.data != null) {
+                } else if (payload && payload.data && payload.data != null) {
                     return payload.data;
                 } else {
                     throw 'network error';
                 }
             })
             .catch(err => console.error(err))
-        )
+        );
     },
     getExt(route, headers, query) {
         return (
@@ -80,26 +79,26 @@ export default {
                 headers: headers
             })
             .then(res => res.json())
-            .then(res => {
+            .then((res) => {
                 return res;
             })
             .catch(err => console.error(err))
-        )
+        );
     },
     postExt(route, headers, data) {
         return (
             fetch(route, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
                 },
                 body: data
             })
-            .then(res => {
+            .then((res) => {
                 return res;
             })
             .catch(err => console.error(err))
-        )
+        );
     }
-}
+};
