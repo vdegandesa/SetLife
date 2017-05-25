@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "eslint ./src --ext .jsx; ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline ",
     "start": "forever stopall; forever start server.js;",
     "stop": "forever stopall;",
     "deploy": "./node_modules/webpack/bin/webpack.js -p --config webpack.config.production.js"
