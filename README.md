@@ -12,7 +12,7 @@ Libaries used: Express, React, Redux, React Router, Webpack
 
 3. Install dependencies `npm install` 
 
-##Directory Layout
+## Directory Layout
 
 Get familiar with the **setlife** folder structure
 
@@ -36,9 +36,9 @@ Get familiar with the **setlife** folder structure
 	|-- /styles/					# All .less stylesheets
 ```
 
-#Usage
+# Usage
 
-##Development
+## Development
 
 Development files are served from webpack-dev-server, configured with webpack.config.js, and hot-reloaded automatically.
 
@@ -52,7 +52,7 @@ this command will bundle up files for webpack-dev-sever and host them on:
 
 **_anything outside of the ~/src folder will not be hot-reloaded when changed_**
 
-##Production	
+## Production	
 
 In development, the bundle is created behind the scenes and is not production ready. The production-ready bundle is served from webpack using the configuration file ~/webpack.config.production.js. To create a production-ready bundle run: 
 
@@ -62,7 +62,7 @@ this command will bundle up files and export them to public folder:
 
 	Setlife/public
 
-##Testing your production bundle 
+## Testing your production bundle 
 
 Testing the production bundle can be done by running an express server from server.js in the root directory. To start the server run:
 
@@ -82,7 +82,7 @@ to terminate the express server run:
 
 	npm run stop
 
-##Using the CLI tools
+## Using the CLI tools
 
 - Run `npm install -g` to enable `setlife` CLI tools
 - `setlife create-component <name>` creates a standard component in /src/components
