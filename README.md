@@ -48,7 +48,7 @@ to start webpack-dev-server run:
 
 this command will bundle up files for webpack-dev-sever and host them on: 
 
-	http://localhost:8080/webpack-dev-server/
+	http://localhost:8080
 
 **_anything outside of the ~/src folder will not be hot-reloaded when changed_**
 
