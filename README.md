@@ -12,27 +12,27 @@ Libaries used: Express, Bookshelf.js, GraphQL
 
 3. Install dependencies `npm install` 
 
-##Directory Layout
+## Directory Layout
 
 Get familiar with the **setlife** folder structure
 
 ```
 |-- /api/                           # Application source code
     |-- /config/                    # Configuration files (database options, keys, constants, etc) 
-    |-- /handlers/                  # Handle 3rd party APIs here with request.js
+    |-- /handlers/                  # Handle 3rd party APIs here with request.js or native npm module
     |-- /models/                    # Database model definitions
     |-- /modules/                   # Holds files with modular functionality
     |-- /types/                     # GraphQL type definitions
     |-- schema.js                   # Root file serving as an index of API endpoints
 ```
 
-#Usage
+# Usage
 
 1. Run `node server`
 
 2. Go to localhost:3000/api/v/1/graph to explore the GraphiQL API and documentation
 
-##Using the CLI tools
+## Using the CLI tools
 
 - Run `npm install -g` to enable `setlife` CLI tools
 - `setlife create-model <name>` creates a standard model in /api/models
