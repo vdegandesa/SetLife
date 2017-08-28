@@ -24,7 +24,7 @@ export default class App extends Base {
     render() {
         
         return (
-            <div>
+            <div className='App'>
                 {this.props.children}
             </div>
         );

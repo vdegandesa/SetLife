@@ -11,11 +11,10 @@ module.exports = {
 		'webpack/hot/only-dev-server',
 		'./src/index.js',
 	],
-	devTool: 'cheap-module-eval-source-map',
 	devServer: {
 		contentBase: './src',
 		historyApiFallback: true,
-		colors: true,
+		inline: true,
 		hot: true
 	},
 	output: {
@@ -24,8 +23,8 @@ module.exports = {
 		pathinfo: true
 	},
 	resolve: {
-		extensions: ['', '.jsx', '.js', '.less'],
-		moduleDirectories: ['node_modules']
+		extensions: ['.jsx', '.js', '.less', '.css'],
+		moduleExtensions: ['node_modules']
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -39,19 +38,35 @@ module.exports = {
 		})
 	],
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.(js|jsx)?$/,
 				include: [
 					path.resolve(__dirname, 'src')
 				],
-				loaders: ['babel-loader'],
+				use: ['babel-loader'],
 				exclude: /node_modules/
 			},
 			{
 				test: /\.less$/,
-				loader: 'style!css!less',
-				exclude: /node_modules/
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+					{
+						loader: 'less-loader',
+						options: {
+							sourceMap: true
+						}
+					}
+				]
 			}
 		]
 	}

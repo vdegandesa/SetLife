@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "eslint ./src --ext .jsx; ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline ",
+    "dev": "eslint ./src --ext .jsx; node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --inline ",
     "start": "forever stopall; forever start server.js;",
     "stop": "forever stopall;",
     "deploy": "./node_modules/webpack/bin/webpack.js -p --config webpack.config.production.js"
@@ -55,7 +55,8 @@
     "react-router-redux": "^4.0.6",
     "redux": "^3.6.0",
     "redux-logger": "^2.6.1",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "webpack": "^3.5.5"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -66,27 +67,28 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "css-loader": "^0.25.0",
+    "css": "^2.2.1",
+    "css-loader": "^0.28.5",
     "es6-promise": "^4.0.5",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.22.0",
     "imports-loader": "^0.6.5",
     "less": "^2.7.1",
-    "less-loader": "^2.2.3",
+    "less-loader": "^4.0.5",
     "path": "^0.12.7",
     "react-addons-css-transition-group": "^15.4.1",
     "react-fontawesome": "^1.5.0",
     "react-hot-loader": "^3.0.0-beta.5",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1",
+    "style": "0.0.3",
+    "style-loader": "^0.18.2",
+    "webpack-dev-server": "^2.7.1",
     "whatwg-fetch": "^1.0.0"
   }
 }
