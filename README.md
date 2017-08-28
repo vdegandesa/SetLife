@@ -91,3 +91,10 @@ to terminate the express server run:
 ---
 - `setlife create-model <name>` creates a standard model in /api/models
 - Add the option `--type` or `-t` to create the associated Bookshelf-GraphQL Type
+
+### Windows Users
+
+- Find the path of your npm global binaries with `npm config et prefix` (usually looks like C:\Users\username\AppData\Roaming\npm)
+- Add this path to your system environment variables
+- Restart bash shell if necessary
+(Check this stackoverflow answer for some more guidance.. it mentions bower as the command not found but same principles apply: https://stackoverflow.com/questions/21732447/bower-command-not-found-windows)
